@@ -18,7 +18,7 @@ const onSignInSuccess = function (response) {
   $('#change-pw').show()
 
   store.user = response.user
-  $('#message').text(response.user.email + ' signed in successfully!')
+  $('#message').text('Signed In Successfully!')
   setTimeout(() => {
   $('#message').text('')
   }, 2500)
@@ -26,11 +26,12 @@ const onSignInSuccess = function (response) {
 }
 
 const onSignInFailure = function () {
-  $('#message').text('Sign in failed')
+  $('#message').text('Invalid Username or Password')
 }
 
 const onChangePwSuccess = function () {
   $('.container').hide()
+  $('.signout').show()
   
 
   $('#message').text('Password Changed!')
@@ -41,7 +42,7 @@ const onChangePwSuccess = function () {
 }
 
 const onChangePwFailure = function () {
-    $('#message').text('Change password failed')
+    $('#message').text('Password Not Match!')
   }
 
 module.exports = {
