@@ -13,6 +13,6 @@ $(() => {
   $('#sign-up').on('submit', jobEvents.onSignUp)
   $('#sign-in').on('submit', jobEvents.onSignIn)
   $('#change-pw').on('submit', jobEvents.onChangePw)
-  $('#sign-out').on('submit', jobEvents.onSignOut)
+  $('.signout').on('click', jobEvents.onSignOut)
   $('#homepage').on('click', event => ($('.container').hide(), $('.signout').show(), event.target))
 })

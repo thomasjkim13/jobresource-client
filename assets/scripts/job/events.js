@@ -38,10 +38,7 @@ const onChangePw = function (event) {
 const onSignOut = function (event) {
   event.preventDefault()
   
-  const form = event.target
-  const data = getFormFields(form)
-  
-  api.signOut(data)
+  api.signOut()
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
   }
