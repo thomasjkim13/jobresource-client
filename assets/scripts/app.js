@@ -14,4 +14,5 @@ $(() => {
   $('#sign-in').on('submit', jobEvents.onSignIn)
   $('#change-pw').on('submit', jobEvents.onChangePw)
   $('#sign-out').on('submit', jobEvents.onSignOut)
+  $('#homepage').on('click', event => ($('.container').hide(), $('.signout').show(), event.target))
 })
