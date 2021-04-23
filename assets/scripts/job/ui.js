@@ -11,7 +11,11 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (response) {
-  $('.container').hide()
+  $('#sign-in').hide()
+  $('#login').hide()
+  $('#signup').hide()
+  $('.chpw').hide()
+  $('#change-pw').show()
 
   store.user = response.user
   $('#message').text(response.user.email + ' signed in successfully!')
@@ -25,9 +29,23 @@ const onSignInFailure = function () {
   $('#message').text('Sign in failed')
 }
 
+const onChangePwSuccess = function () {
+  $('#message').text('Password Changed!')
+  setTimeout(() => {
+    $('#message').text('')
+    }, 2000)
+  $('#change-pw').trigger('reset')
+}
+
+const onChangePwFailure = function () {
+    $('#message').text('Change password failed')
+  }
+
 module.exports = {
   onSignInSuccess,
   onSignInFailure,
   onSignUpSuccess,
-  onSignUpFailure
+  onSignUpFailure,
+  onChangePwSuccess,
+  onChangePwFailure
 }

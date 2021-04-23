@@ -19,14 +19,18 @@ const signIn = function (data) {
 }
 
 const changePw = function (data) {
-    return $.ajax({
-      method: 'POST',
-      url: config.apiUrl + '/sign-in',
-      data: data
-    })
-  }
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/change-password',
+    data: data,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 
 module.exports = {
     signIn,
-    signUp
+    signUp,
+    changePw
 }
