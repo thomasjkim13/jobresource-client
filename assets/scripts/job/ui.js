@@ -30,20 +30,6 @@ const onSignInFailure = function () {
   $('#message').text('Invalid Username or Password')
 }
 
-const onSignOutSuccess = function () {
-  $('#message').text('You have signed out successfully!')
-  $('#sign-out').hide()
-  $('#change-password').hide()
-  $('#sign-in').show()
-  $('#sign-up').show()
-  store.user = null
-}
-
-const onSignOutFailure = function () {
-  $('#message').text('You failed signing out')
-}
-
-
 const onChangePwSuccess = function () {
   $('.container').hide()
   $('.signout').show()
@@ -60,11 +46,23 @@ const onChangePwFailure = function () {
     $('#message').text('Password Not Match!')
   }
 
+const onSignOutSuccess = function () {
+  $('#message').text('Signed Out')
+
+  store.user = null
+}
+
+const onSignOutFailure = function () {
+  $('#message').text('Error')
+}
+
 module.exports = {
   onSignInSuccess,
   onSignInFailure,
   onSignUpSuccess,
   onSignUpFailure,
   onChangePwSuccess,
-  onChangePwFailure
+  onChangePwFailure,
+  onSignOutSuccess,
+  onSignOutFailure
 }
