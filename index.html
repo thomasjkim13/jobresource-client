@@ -24,32 +24,42 @@
             </ul>
           </div>
         </nav>
+        <p id="message"></p>
         <div class="container">
           <div class="card">
-            <div class="inner-box">
+            <div class="inner-box" id="card">
               <div class="front">
                 <h2>LOGIN</h2>
-                <form>
-                  <input type="email" class="input-box" placeholder="Email Address" required>
-                  <input type="password" class="input-box" placeholder="Password" required>
+                <form id="sign-in">
+                  <input type="email" name="credentials[email]" class="input-box" placeholder="Email Address" required>
+                  <input type="password" name="credentials[password]" class="input-box" placeholder="Password" required>
                   <button type="submit" class="submit-btn">Sign In</button>
                 </form>
-                <button type="button" class="btn">Sign Up</button>
+                <button type="button" class="btn" onclick="openBack()">Sign Up</button>
                 <a href="">Forgot Password</a>
               </div>
               <div class="back">
                 <h2>REGISTER</h2>
-                <form>
-                  <input type="email" class="input-box" placeholder="Email Address" required>
-                  <input type="password" class="input-box" placeholder="Password" required>
-                  <input type="password" class="input-box" placeholder="PasswordConfirmation" required>
-                  <button type="button" class="submit-btn">Sign Up</button>
+                <form id="sign-up">
+                  <input type="email" name="credentials[email]" class="input-box" placeholder="Email Address" required>
+                  <input type="password" name="credentials[password]" class="input-box" placeholder="Password" required>
+                  <input type="password" name="credentials[password_confirmation]" class="input-box" placeholder="Confirm Password" required>
+                  <button type="submit" class="submit-btn" onclick="openFront()">Sign Up</button>
                 </form>
                 <a href="">Forgot Password</a>
               </div>
             </div>
           </div>
         </div>
+        <script>
+          let card = document.getElementById("card")
+          function openBack(){
+            card.style.transform = "rotateY(-180deg)"
+          }
+          function openFront(){
+            card.style.transform = "rotateY(0deg)"
+          }
+        </script>
       </section>
       
 
