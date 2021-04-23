@@ -30,6 +30,9 @@ const onSignInFailure = function () {
 }
 
 const onChangePwSuccess = function () {
+  $('.container').hide()
+  
+
   $('#message').text('Password Changed!')
   setTimeout(() => {
     $('#message').text('')
