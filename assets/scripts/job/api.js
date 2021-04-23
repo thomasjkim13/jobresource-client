@@ -29,8 +29,20 @@ const changePw = function (data) {
   })
 }
 
+const signOut = function (data) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/sign-out',
+    data: data,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
     signIn,
     signUp,
-    changePw
+    changePw,
+    signOut
 }

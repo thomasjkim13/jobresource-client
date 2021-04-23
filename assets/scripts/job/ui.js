@@ -16,6 +16,7 @@ const onSignInSuccess = function (response) {
   $('#signup').hide()
   $('.chpw').hide()
   $('#change-pw').show()
+  $('#homepage').show()
 
   store.user = response.user
   $('#message').text('Signed In Successfully!')
@@ -28,6 +29,20 @@ const onSignInSuccess = function (response) {
 const onSignInFailure = function () {
   $('#message').text('Invalid Username or Password')
 }
+
+const onSignOutSuccess = function () {
+  $('#message').text('You have signed out successfully!')
+  $('#sign-out').hide()
+  $('#change-password').hide()
+  $('#sign-in').show()
+  $('#sign-up').show()
+  store.user = null
+}
+
+const onSignOutFailure = function () {
+  $('#message').text('You failed signing out')
+}
+
 
 const onChangePwSuccess = function () {
   $('.container').hide()
