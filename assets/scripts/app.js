@@ -9,4 +9,6 @@ const jobEvents = require('./job/events')
 $(() => {
   $('#sign-up').on('submit', jobEvents.onSignUp)
   $('#sign-in').on('submit', jobEvents.onSignIn)
+  $('#change-pw').on('submit', jobEvents.onChangePw)
+
 })

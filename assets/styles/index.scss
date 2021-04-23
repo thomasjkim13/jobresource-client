@@ -12,10 +12,10 @@ $imagePath :"assets/images";
     background-position: center;
     height: 100vh;
 }
-#message {
+p {
     display: flex;
-    justify-items: center;
-    align-items: center ;
+    justify-content: center;
+    align-content: center ;
     color: white;
     font-size: 20px;
 }

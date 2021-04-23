@@ -11,6 +11,8 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (response) {
+  $('.container').hide()
+
   store.user = response.user
   $('#message').text(response.user.email + ' signed in successfully!')
   setTimeout(() => {

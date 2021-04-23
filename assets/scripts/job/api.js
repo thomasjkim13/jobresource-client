@@ -18,6 +18,14 @@ const signIn = function (data) {
   })
 }
 
+const changePw = function (data) {
+    return $.ajax({
+      method: 'POST',
+      url: config.apiUrl + '/sign-in',
+      data: data
+    })
+  }
+
 module.exports = {
     signIn,
     signUp
