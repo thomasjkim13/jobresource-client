@@ -9,10 +9,19 @@ const jobEvents = require('./job/events')
 $(() => {
   $('#change-pw').hide()
   $('.signout').hide()
+  $('#mainpage').hide()
   
+
+
   $('#sign-up').on('submit', jobEvents.onSignUp)
   $('#sign-in').on('submit', jobEvents.onSignIn)
   $('#change-pw').on('submit', jobEvents.onChangePw)
   $('.signout').on('click', jobEvents.onSignOut)
-  $('#homepage').on('click', event => ($('.container').hide(), $('.signout').show(), event.target))
+  $('#homepage').on('click', event => (
+    $('.container').hide(), 
+    $('.signout').show(), 
+    $('#mainpage').show(),
+    event.target
+  )
+  )
 })

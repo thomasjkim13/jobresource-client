@@ -36,9 +36,9 @@
                 <form id="sign-in">
                   <input type="email" name="credentials[email]" class="input-box" placeholder="Email Address" required>
                   <input type="password" name="credentials[password]" class="input-box" placeholder="Password" required>
-                  <button type="submit" class="submit-btn">Sign In</button>
+                  <button type="submit" class="submit-btn" id="signin">Sign In</button>
                 </form>
-                <button type="button" class="btn" id="signup" onclick="openBack()">Sign Up</button>
+                <button type="button" class="submit-btn" id="signup" onclick="openBack()">Sign Up</button>
                 <form id="change-pw">
                   <input type="password" name="passwords[old]" class="input-box" placeholder="Current Password" required>
                   <input type="password" name="passwords[new]" class="input-box" placeholder="New Password" required>
@@ -67,11 +67,20 @@
             card.style.transform = "rotateY(0deg)"
           }
         </script>
+<!----------------------Main Page------------------------------------------------------------------>
+        <form id="mainpage">
+          <div class="input-group">
+            <div class="form-outline">
+              <input type="search" id="form1" class="form-control" />
+              <label class="form-label" for="form1">Search</label>
+            </div>
+            <button type="button" class="searchbtn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>    
       </section>
-<!----------------------Main Page------------------------------------------------------------->
-      <section id="mainpage">
 
-      </section>
 
     </body>
 </html>
