@@ -67,6 +67,26 @@ const onSignOutFailure = function () {
   $('#message').text('Error')
 }
 
+const onIndexSuccess = function (response) {
+  // extract the jobs from our response's data so they are easier to use
+  const jobs = response.jobs
+  console.log(response)
+  // this will be all of the html to show every job
+  let jobHtml = ''
+  // for each job in our response's data
+  jobs.forEach(job => {
+    // add some html to show that job, to our jobHtml variable
+    jobHtml += `
+      <p>Company: ${job.company}</p>
+      <p>Title: ${job.title}</p>
+      <p>experienceLevel: ${job.experienceLevel}</p>
+      <button class='jobs-destroy-dynamic' data-id=${job._id}>Delete</button>
+      <p>------------------------------------------------------------------------</p>`
+  })
+  // setting the job-display to have the html of all the jobs
+  $('#job-display').html(jobHtml)
+}
+
 module.exports = {
   onSignInSuccess,
   onSignInFailure,
@@ -75,5 +95,6 @@ module.exports = {
   onChangePwSuccess,
   onChangePwFailure,
   onSignOutSuccess,
-  onSignOutFailure
+  onSignOutFailure,
+  onIndexSuccess
 }

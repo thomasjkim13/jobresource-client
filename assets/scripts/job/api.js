@@ -40,9 +40,20 @@ const signOut = function (data) {
   })
 }
 
+const jobIndex = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/jobs',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
     signIn,
     signUp,
     changePw,
-    signOut
+    signOut,
+    jobIndex
 }

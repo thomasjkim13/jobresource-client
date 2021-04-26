@@ -214,11 +214,12 @@ nav img{
     text-align: center;
     width: 20%;
 }
-.searchbtn{
+.searchbtn,
+.jobs-destroy-dynamic{
     width:8%;
     background: transparent;
     outline: none;
-    color: white;
+    color: blue;
     border-radius: 20px;
     height: 32px;
     border: 1px solid white;
@@ -226,14 +227,24 @@ nav img{
     padding: 0 10px;
     text-align: center;
 }
-.searchbtn:hover{
+.searchbtn:hover,
+.jobs-destroy-dynamic:hover{
     background-color: lightgray;
     transition: 1s;
 }
 .createjob{
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     margin-top: 100px;
+}
+
+#job-display{
+    align-items: center;
+    color: White;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
 }

@@ -43,9 +43,18 @@ const onSignOut = function (event) {
     .catch(ui.onSignOutFailure)
   }
 
+const onIndexJob = function () {
+  console.log('in events.js the button was clicked')
+  api.jobIndex()
+    .then(ui.onIndexSuccess)
+    .catch(ui.onError)
+}
+
+
 module.exports = {
     onSignIn,
     onSignUp,
     onChangePw,
-    onSignOut
+    onSignOut,
+    onIndexJob
 }
