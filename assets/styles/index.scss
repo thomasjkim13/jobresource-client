@@ -206,3 +206,19 @@ nav img{
     text-align: center;
     width: 20%;
 }
+.searchbtn{
+    width:8%;
+    background: transparent;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    height: 32px;
+    border: 1px solid white;
+    margin: 6px 0;
+    padding: 0 10px;
+    text-align: center;
+}
+.searchbtn:hover{
+    background-color: lightgray;
+    transition: 1s;
+}
