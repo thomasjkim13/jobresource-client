@@ -23,8 +23,13 @@ $(() => {
     $('.signout').show(), 
     $('#mainpage').show(),
     event.target
-  )
-  )
+  ))
+  $('.mainpage').on('click', event => (
+    $('#mainpage').show(),
+    $('#company').hide(),
+    event.target
+  ))
+
   $('.companybtn').on('click', event => (
     $('#company').show(),
     $('#mainpage').hide(),
