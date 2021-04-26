@@ -19,8 +19,8 @@
           <div class="nav-links">
             <ul>
               <li><button class="mainpage">JOBS</button></li>
-              <!-- <li><button class="companybtn">COMPANY</button></li> -->
               <li><button class="postjob">POST</button></li>
+              <li><button class="updatebtn">UPDATE</button></li>
             </ul>
           </div>
           <form id="sign-out">
@@ -79,15 +79,14 @@
             <div id="job-display"></div>
           </div>
         </form>  
-<!----------------------Companies Page--------------------------------->
-        <!-- <form id="company">
-          <div id="container">
-            <div class="company-bar">
-              <input type="text" class="searchcompany" placeholder="Search by company...">
-              <button class="searchbtn">Search</button>
-            </div>
-          </div>
-        </form> -->
+<!----------------------Update Page--------------------------------->
+        <form id="update">
+          <input name="job[id]" type="text" class="searchcompany" placeholder="Enter id here">
+          <input name="job[company]" type="text" class="searchcompany" placeholder="Enter company name">
+          <input name="job[title]" type="text" class="searchcompany" placeholder="Enter job title">
+          <input name="job[experiencelevel]" type="text" class="searchcompany" placeholder="Enter experience level">
+          <button class="searchbtn">Update</button>
+        </form>
 <!---------------------POST JOB------------------------------->
         <form id="post">
           <div id="container">
@@ -95,8 +94,7 @@
               <input type="text" class="postCompany" placeholder="Company Name">
               <input type="text" class="postTitle" placeholder="Job Title">
               <input type="text" class="postLevel" placeholder="Experience Level">
-              <button class="searchbtn">POST</button>
-              <button class="searchbtn">UPDATE</button>
+              <button id="createPost" class="searchbtn">POST</button>
             </div>
           </div>
         </form>

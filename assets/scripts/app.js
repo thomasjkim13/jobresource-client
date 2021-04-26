@@ -10,7 +10,7 @@ $(() => {
   $('#change-pw').hide()
   $('.signout').hide()
   $('#mainpage').hide()
-  // $('#company').hide()
+  $('#update').hide()
   $('#post').hide()
   
 
@@ -28,20 +28,20 @@ $(() => {
     $('.signout').show(),
     event.target,
     $('.postjob').on('click', event => (
-      // $('#company').hide(),
+      $('#update').hide(),
       $('#mainpage').hide(),
       $('#post').show(),
       event.target
     )),
-    // $('.companybtn').on('click', event => (
-      // $('#company').show(),
-      // $('#mainpage').hide(),
-      // $('#post').hide(),
-      // event.target
-    // )),
+    $('.updatebtn').on('click', event => (
+      $('#update').show(),
+      $('#mainpage').hide(),
+      $('#post').hide(),
+      event.target
+    )),
     $('.mainpage').on('click', event => (
       $('#mainpage').show(),
-      // $('#company').hide(),
+      $('#company').hide(),
       $('#post').hide(),
       event.target
     ))
