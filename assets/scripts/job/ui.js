@@ -55,6 +55,7 @@ const onChangePwFailure = function () {
 const onSignOutSuccess = function () {
   $('.container').show()
   $('.signout').hide()
+  $('#message').text('Logged Out Successfully!')
   setTimeout(() => {
     $('#message').text('')
     }, 1500)
@@ -79,7 +80,8 @@ const onIndexSuccess = function (response) {
     jobHtml += `
       <p>Company: ${job.company}</p>
       <p>Title: ${job.title}</p>
-      <p>experienceLevel: ${job.experienceLevel}</p>
+      <p>Experience_Level: ${job.experienceLevel}</p>
+      <p>Id: ${job._id}</p>
       <button class='jobs-destroy-dynamic' data-id=${job._id}>Delete</button>
       <p>------------------------------------------------------------------------</p>`
   })
@@ -87,6 +89,13 @@ const onIndexSuccess = function (response) {
   $('#job-display').html(jobHtml)
 }
 
+const onCreateSuccess = function () {
+  $('#message').text('Job updated!')
+  setTimeout(() => {
+    $('#message').text('')
+    }, 1500)
+  $('.createjob').trigger('reset')
+}
 module.exports = {
   onSignInSuccess,
   onSignInFailure,
@@ -96,5 +105,6 @@ module.exports = {
   onChangePwFailure,
   onSignOutSuccess,
   onSignOutFailure,
-  onIndexSuccess
+  onIndexSuccess,
+  onCreateSuccess
 }

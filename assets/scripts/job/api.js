@@ -50,10 +50,22 @@ const jobIndex = function () {
   })
 }
 
+const create = function (data) {
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/jobs',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: data
+  })
+}
+
 module.exports = {
     signIn,
     signUp,
     changePw,
     signOut,
-    jobIndex
+    jobIndex,
+    create
 }

@@ -20,6 +20,8 @@ $(() => {
   $('#change-pw').on('submit', jobEvents.onChangePw)
   $('.signout').on('click', jobEvents.onSignOut)
   $('.mainpage').on('click', jobEvents.onIndexJob)
+  $('.createjob').on('submit', jobEvents.onCreateJob)
+
   
 
 

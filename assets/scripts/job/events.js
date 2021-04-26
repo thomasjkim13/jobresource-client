@@ -50,11 +50,22 @@ const onIndexJob = function () {
     .catch(ui.onError)
 }
 
+const onCreateJob = function(event) {
+  event.preventDefault()
+  
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.create(data)
+    .then(ui.onCreateSuccess)
+    .catch(ui.onError)
+}
 
 module.exports = {
     onSignIn,
     onSignUp,
     onChangePw,
     onSignOut,
-    onIndexJob
+    onIndexJob,
+    onCreateJob
 }
