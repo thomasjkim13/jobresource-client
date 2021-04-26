@@ -12,15 +12,15 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-<!---------------Front page------------------------------------------------------>
+<!---------------Front page---------------------------------------->
       <section id="banner">
         <nav>
           <h1 class="logo">WANNABE</h1>
           <div class="nav-links">
             <ul>
-              <li><a href="#mainpage">JOBS</a></li>
-              <li><a href="">COMPANIES</a></li>
-              <li><a href="">POST</a></li>
+              <li><button class="#mainpage">JOBS</button></li>
+              <li><button class="companybtn">COMPANIES</button></li>
+              <li><button class="">POST</button></li>
             </ul>
           </div>
           <form id="sign-out">
@@ -45,7 +45,7 @@
                   <button type="submit" class="submit-btn">Save Change</button>
                   <button type="button" id="homepage" class="submit-btn">Home Page</button>
                 </form>
-<!--------------------------------Back Page Sign Up-------------------------------------->
+<!--------------------------------Back Page Sign Up----------------------------------->
               </div>
               <div class="back">
                 <h2>REGISTER</h2>
@@ -68,7 +68,7 @@
             card.style.transform = "rotateY(0deg)"
           }
         </script>
-<!----------------------Main Page------------------------------------------------------------------>
+<!----------------------Main Page----------------------------------->
         <form id="mainpage">
           <div id="container">
             <div class="search-bar">
@@ -77,10 +77,20 @@
               <button class="searchbtn">Search</button>
             </div>
           </div>
-        </form>    
-      </section>
+        </form>  
+<!----------------------Companies Page--------------------------------->
+        <form id="company">
+          <div id="container">
+            <div class="company-bar">
+              <input type="text" class="searchcompany" placeholder="Search by company...">
+              <button class="searchbtn">Search</button>
+            </div>
+          </div>
+        </form>
 
+      </section>  
 
+      
     </body>
 </html>
 

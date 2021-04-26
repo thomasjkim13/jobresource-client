@@ -10,6 +10,7 @@ $(() => {
   $('#change-pw').hide()
   $('.signout').hide()
   $('#mainpage').hide()
+  $('#company').hide()
   
 
 
@@ -24,4 +25,9 @@ $(() => {
     event.target
   )
   )
+  $('.companybtn').on('click', event => (
+    $('#company').show(),
+    $('#mainpage').hide(),
+    event.target
+  ))
 })

@@ -46,10 +46,13 @@ nav img{
     padding: 8px 20px;
     position: relative;
 }
-.nav-links ul li a{
+.nav-links ul li button{
+    background: transparent;
+    outline: none;
     color:white;
     font-size: 15px;
     text-decoration: none;
+    border: none;
 }
 .signout{
     background: transparent;
