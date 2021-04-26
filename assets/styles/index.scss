@@ -197,7 +197,12 @@ nav img{
     justify-content: center;
     margin-top: 100px;
 }
-.searchtitle, .searchlevel, .searchcompany{
+.searchtitle, 
+.searchlevel, 
+.searchcompany, 
+.postCompany, 
+.postTitle, 
+.postLevel{
     background: transparent;
     border: 1px solid white;
     border-radius: 20px;
@@ -224,4 +229,11 @@ nav img{
 .searchbtn:hover{
     background-color: lightgray;
     transition: 1s;
+}
+.createjob{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
 }
