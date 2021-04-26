@@ -11,6 +11,7 @@ $(() => {
   $('.signout').hide()
   $('#mainpage').hide()
   $('#company').hide()
+  $('#post').hide(),
   
 
 
@@ -27,12 +28,20 @@ $(() => {
   $('.mainpage').on('click', event => (
     $('#mainpage').show(),
     $('#company').hide(),
+    $('#post').hide(),
     event.target
   ))
 
   $('.companybtn').on('click', event => (
     $('#company').show(),
     $('#mainpage').hide(),
+    $('#post').hide(),
+    event.target
+  ))
+  $('.postjob').on('click', event => (
+    $('#company').hide(),
+    $('#mainpage').hide(),
+    $('#post').show(),
     event.target
   ))
 })
