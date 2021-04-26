@@ -129,7 +129,7 @@ nav img{
     outline: none;
     padding: 0 10px;
     text-align: center;
-    width: 100%;
+    width: 100%; 
 }
 ::placeholder{
     color: white;
@@ -185,4 +185,24 @@ nav img{
     margin-top: 20px;
     text-align: center;
     text-decoration: none;
+}
+
+//---------------Search Bar-----------------------------
+.search-bar{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.searchtitle, .searchlevel{
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    height: 32px;
+    margin: 6px 0;
+    outline: none;
+    padding: 0 10px;
+    text-align: center;
+    width: 20%;
 }
