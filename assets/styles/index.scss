@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
 @import '~bootstrap/scss/bootstrap';
-$imagePath :"assets/images";
+
 *{
     margin: 0;
     padding: 0;
 }
 
 #banner {
-    background: linear-gradient(rgba(0,0,0,0.5), #fff), url(#{$imagePath}/background.jpeg);
+    background-image: linear-gradient(rgba(0,0,0,0.5), #fff), url('public/background.jpeg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -101,7 +101,7 @@ nav img{
     width: 100%;
 }
 .front, .back{
-    background-image: linear-gradient(rgba(0,0,0,0.5), #fff),url(#{$imagePath}/background.webp);
+    background-image: linear-gradient(rgba(0,0,0,0.5), #fff), url('public/background.webp');
     background-position: center;
     background-size: cover;
     box-sizing: border-box;
