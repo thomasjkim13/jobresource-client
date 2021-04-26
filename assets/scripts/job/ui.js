@@ -5,7 +5,7 @@ const onSignUpSuccess = function () {
   $('#message').text('Signed up successfully')
   setTimeout(() => {
   $('#message').text('')
-  }, 1000)
+  }, 1500)
   $('#sign-up').trigger('reset')
 }
   
@@ -25,7 +25,7 @@ const onSignInSuccess = function (response) {
   $('#message').text('Signed In Successfully!')
   setTimeout(() => {
   $('#message').text('')
-  }, 1000)
+  }, 1500)
   $('#sign-in').trigger('reset')
 }
 
@@ -34,14 +34,17 @@ const onSignInFailure = function () {
 }
 
 const onChangePwSuccess = function () {
-  $('.container').hide()
+  // $('.container').hide()
   $('.signout').show()
+  // $('.back').hide()
+  // $('.front').show()
+
   
 
   $('#message').text('Password Changed!')
   setTimeout(() => {
     $('#message').text('')
-    }, 1000)
+    }, 1500)
   $('#change-pw').trigger('reset')
 }
 
@@ -50,14 +53,13 @@ const onChangePwFailure = function () {
   }
 
 const onSignOutSuccess = function () {
-    location.reload();
-  $('#message').text('Signed Out')
   $('.container').show()
   $('.signout').hide()
   setTimeout(() => {
     $('#message').text('')
-    }, 1000)
+    }, 1500)
 
+  location.reload();
   store.user = null
 }
 
