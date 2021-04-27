@@ -62,11 +62,23 @@ const create = function (data) {
   })
 }
 
+const destroy = function (id) {
+  return $.ajax({
+    method: 'DELETE',
+    // similar to index, but we have an id for the job we want to delete
+    url: config.apiUrl + '/jobs/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
     signIn,
     signUp,
     changePw,
     signOut,
     jobIndex,
-    create
+    create,
+    destroy
 }

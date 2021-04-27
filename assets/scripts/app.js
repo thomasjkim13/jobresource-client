@@ -12,6 +12,7 @@ $(() => {
   $('#mainpage').hide()
   $('#update').hide()
   $('#post').hide()
+  $('#job-destroy').hide()
   
 
 
@@ -21,9 +22,7 @@ $(() => {
   $('.signout').on('click', jobEvents.onSignOut)
   $('.mainpage').on('click', jobEvents.onIndexJob)
   $('#post').on('submit', jobEvents.onCreateJob)
-
-  
-
+  $('#job-destroy').on('submit', jobEvents.onDestroyJob)
 
   $('#homepage').on('click', event => (
     $('.container').hide(), 

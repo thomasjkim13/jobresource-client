@@ -266,3 +266,37 @@ nav img{
 .breakline{
     color: #26495c;
 }
+#job-destroy{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.destroyJob{
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    height: 32px;
+    margin: 6px 0;
+    outline: none;
+    padding: 0 10px;
+    text-align: center;
+    width: 20%;
+}
+.destroyJob:hover{
+    background-color: black;
+    transition: 1s;
+}
+.destroybtn{
+    width:8%;
+    background-color: #1d3c45;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    height: 32px;
+    border: 1px solid white;
+    margin: 6px 0;
+    padding: 0 10px;
+    text-align: center;
+}

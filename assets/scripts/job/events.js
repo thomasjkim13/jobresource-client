@@ -61,11 +61,21 @@ const onCreateJob = function(event) {
     .catch(ui.onError)
 }
 
+const onDestroyJob = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  api.destroy(data.job.id)
+    .then(ui.onDestroySuccess)
+    .catch(ui.onError)
+}
+
 module.exports = {
     onSignIn,
     onSignUp,
     onChangePw,
     onSignOut,
     onIndexJob,
-    onCreateJob
+    onCreateJob,
+    onDestroyJob
 }

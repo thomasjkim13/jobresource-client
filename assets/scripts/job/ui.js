@@ -38,9 +38,6 @@ const onChangePwSuccess = function () {
   $('.signout').show()
   // $('.back').hide()
   // $('.front').show()
-
-  
-
   $('#message').text('Password Changed!')
   setTimeout(() => {
     $('#message').text('')
@@ -80,11 +77,11 @@ const onIndexSuccess = function (response) {
     jobHtml += `
       <p class="comname">Company: ${job.company}</p>
       <p class="comtitle">Title: ${job.title}</p>
-      <p class="comlevel">Experience_Level: ${job.experienceLevel}</p>
+      <p class="comlevel">Experience_Level: ${job.level}</p>
       <p class="jobid">Id: ${job._id}</p>
-      <button class='jobs-destroy-dynamic' data-id=${job._id}>Delete</button>
       <p class="breakline">------------------------------------------------------------------------</p>`
   })
+  $('#job-destroy').show()
   // setting the job-display to have the html of all the jobs
   $('#job-display').html(jobHtml)
 }
@@ -96,6 +93,17 @@ const onCreateSuccess = function () {
     }, 1500)
   $('#post').trigger('reset')
 }
+
+const onDestroySuccess = function () {
+  $('#message').text('Job successfully deleted! Click JOBS tab to refresh')
+  // adding a class of `success` to the element with the id `books-destroy-message`
+  setTimeout(() => {
+    // Clear the destroy books message
+    $('#message').text('')
+  }, 1500)
+  $('#job-display').trigger('reset')
+}
+
 module.exports = {
   onSignInSuccess,
   onSignInFailure,
@@ -106,5 +114,6 @@ module.exports = {
   onSignOutSuccess,
   onSignOutFailure,
   onIndexSuccess,
-  onCreateSuccess
+  onCreateSuccess,
+  onDestroySuccess
 }
