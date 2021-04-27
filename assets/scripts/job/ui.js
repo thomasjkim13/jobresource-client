@@ -102,6 +102,8 @@ const onDestroySuccess = function () {
     $('#message').text('')
   }, 1500)
   $('#job-display').trigger('reset')
+  $('#job-destroy').trigger('reset')
+
 }
 
 const onUpdateSuccess = function () {
@@ -110,6 +112,7 @@ const onUpdateSuccess = function () {
     $('#message').text('')
   }, 1500)
   $('#update').trigger('reset')
+  // reload($('update'))
 }
 
 module.exports = {
