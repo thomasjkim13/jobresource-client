@@ -73,6 +73,19 @@ const destroy = function (id) {
   })
 }
 
+const update = function (id, data) {
+  return $.ajax({
+    // set the method to PATCH to "partially update" a book
+    method: 'PATCH',
+    url: config.apiUrl + '/jobs/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    // send the formData along to update our book with
+    data: data
+  })
+}
+
 module.exports = {
     signIn,
     signUp,
@@ -80,5 +93,6 @@ module.exports = {
     signOut,
     jobIndex,
     create,
-    destroy
+    destroy,
+    update
 }

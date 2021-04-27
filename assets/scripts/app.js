@@ -23,6 +23,8 @@ $(() => {
   $('.mainpage').on('click', jobEvents.onIndexJob)
   $('#post').on('submit', jobEvents.onCreateJob)
   $('#job-destroy').on('submit', jobEvents.onDestroyJob)
+  $('#update').on('submit', jobEvents.onUpdateJob)
+
 
   $('#homepage').on('click', event => (
     $('.container').hide(), 

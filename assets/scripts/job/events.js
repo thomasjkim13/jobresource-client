@@ -70,6 +70,19 @@ const onDestroyJob = function (event) {
     .catch(ui.onError)
 }
 
+const onUpdateJob = function (event) {
+  event.preventDefault()
+  // getting the data out of our form
+  const form = event.target
+  const data = getFormFields(form)
+  // extracting the book id out of the formData
+  const id = data.job.id
+  // update the book with `id`, using the data from our form
+  api.update(id, data)
+    .then(ui.onUpdateSuccess)
+    .catch(ui.onError)
+}
+
 module.exports = {
     onSignIn,
     onSignUp,
@@ -77,5 +90,6 @@ module.exports = {
     onSignOut,
     onIndexJob,
     onCreateJob,
-    onDestroyJob
+    onDestroyJob,
+    onUpdateJob
 }

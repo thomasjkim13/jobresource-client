@@ -104,6 +104,14 @@ const onDestroySuccess = function () {
   $('#job-display').trigger('reset')
 }
 
+const onUpdateSuccess = function () {
+  $('#message').text('Job successfully updated! Click JOBS tab to refresh.')
+  setTimeout(() => {
+    $('#message').text('')
+  }, 1500)
+  $('#update').trigger('reset')
+}
+
 module.exports = {
   onSignInSuccess,
   onSignInFailure,
@@ -115,5 +123,6 @@ module.exports = {
   onSignOutFailure,
   onIndexSuccess,
   onCreateSuccess,
-  onDestroySuccess
+  onDestroySuccess,
+  onUpdateSuccess
 }
