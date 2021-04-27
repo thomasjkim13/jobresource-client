@@ -78,19 +78,19 @@ const onIndexSuccess = function (response) {
   jobs.forEach(job => {
     // add some html to show that job, to our jobHtml variable
     jobHtml += `
-      <p>Company: ${job.company}</p>
-      <p>Title: ${job.title}</p>
-      <p>Experience_Level: ${job.experienceLevel}</p>
-      <p>Id: ${job._id}</p>
+      <p class="comname">Company: ${job.company}</p>
+      <p class="comtitle">Title: ${job.title}</p>
+      <p class="comlevel">Experience_Level: ${job.experienceLevel}</p>
+      <p class="jobid">Id: ${job._id}</p>
       <button class='jobs-destroy-dynamic' data-id=${job._id}>Delete</button>
-      <p>------------------------------------------------------------------------</p>`
+      <p class="breakline">------------------------------------------------------------------------</p>`
   })
   // setting the job-display to have the html of all the jobs
   $('#job-display').html(jobHtml)
 }
 
 const onCreateSuccess = function () {
-  $('#message').text('Job updated!')
+  $('#message').text('Job successfully created!')
   setTimeout(() => {
     $('#message').text('')
     }, 1500)
