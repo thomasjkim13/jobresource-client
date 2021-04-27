@@ -75,9 +75,9 @@ const onIndexSuccess = function (response) {
   jobs.forEach(job => {
     // add some html to show that job, to our jobHtml variable
     jobHtml += `
-      <p class="comname">Company: ${job.company}</p>
-      <p class="comtitle">Title: ${job.title}</p>
-      <p class="comlevel">Experience_Level: ${job.level}</p>
+      <p class="comname">COMPANY: ${job.company}</p>
+      <p class="comtitle">TITLE: ${job.title}</p>
+      <p class="comlevel">LEVEL: ${job.level}</p>
       <p class="jobid">Id: ${job._id}</p>
       <p class="breakline">------------------------------------------------------------------------</p>`
   })
