@@ -94,7 +94,7 @@ const onCreateSuccess = function () {
   setTimeout(() => {
     $('#message').text('')
     }, 1500)
-  $('.createjob').trigger('reset')
+  $('#post').trigger('reset')
 }
 module.exports = {
   onSignInSuccess,
