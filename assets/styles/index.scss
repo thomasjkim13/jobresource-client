@@ -67,6 +67,10 @@ nav img{
     padding: 0 10px;
     text-align: center;
 }
+.signout:hover{
+    background-color: #320d3e;
+    transition: 1s;
+}
 .nav-links ul li::after{
     background: white;
     content: '';
@@ -144,7 +148,7 @@ nav img{
    border: 1px solid white;
    border-radius: 20px;
    box-sizing: border-box;
-   color: blue;
+   color: #5c3c92;
    cursor: pointer;
    font-size: 14px;
    height: 32px;
@@ -162,7 +166,7 @@ nav img{
     border: 1px solid white;
     border-radius: 20px;
     box-sizing: border-box;
-    color: blue;
+    color: #5c3c92;
     cursor: pointer;
     font-size: 14px;
     height: 32px;
@@ -182,7 +186,7 @@ nav img{
     margin-top: 15px;
 }
 .card a{
-    color: blue;
+    color: #5c3c92;
     display: block;
     font-size: 15px;
     margin-top: 20px;
@@ -197,40 +201,6 @@ nav img{
     justify-content: center;
     margin-top: 100px;
 }
-.searchtitle, 
-.searchlevel, 
-.searchcompany, 
-.postCompany, 
-.postTitle, 
-.postLevel{
-    background: transparent;
-    border: 1px solid white;
-    border-radius: 20px;
-    color: white;
-    height: 32px;
-    margin: 6px 0;
-    outline: none;
-    padding: 0 10px;
-    text-align: center;
-    width: 20%;
-}
-.searchbtn{
-    width:8%;
-    background: transparent;
-    outline: none;
-    color: blue;
-    border-radius: 20px;
-    height: 32px;
-    border: 1px solid white;
-    margin: 6px 0;
-    padding: 0 10px;
-    text-align: center;
-}
-.searchbtn:hover,
-.jobs-destroy-dynamic:hover{
-    background-color: lightgray;
-    transition: 1s;
-}
 #post, #update{
     align-items: center;
     display: flex;
@@ -238,7 +208,6 @@ nav img{
     justify-content: center;
     margin-top: 100px;
 }
-
 #job-display{
     align-items: center;
     color: #5c3c92;
@@ -272,6 +241,12 @@ nav img{
     justify-content: center;
     width: 100%;
 }
+.searchtitle, 
+.searchlevel, 
+.searchcompany, 
+.postCompany, 
+.postTitle, 
+.postLevel,
 .destroyJob{
     background: transparent;
     border: 1px solid white;
@@ -284,10 +259,17 @@ nav img{
     text-align: center;
     width: 20%;
 }
+.searchtitle:hover, 
+.searchlevel:hover, 
+.searchcompany:hover, 
+.postCompany:hover, 
+.postTitle:hover, 
+.postLevel:hover,
 .destroyJob:hover{
     background-color: black;
     transition: 1s;
 }
+.searchbtn,
 .destroybtn{
     width:8%;
     background-color: #1d3c45;
