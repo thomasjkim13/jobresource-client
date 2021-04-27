@@ -32,18 +32,21 @@ $(() => {
       $('#update').hide(),
       $('#mainpage').hide(),
       $('#post').show(),
+      $('#job-destroy').hide(),
       event.target
     )),
     $('.updatebtn').on('click', event => (
       $('#update').show(),
       $('#mainpage').hide(),
       $('#post').hide(),
+      $('#job-destroy').hide(),
       event.target
     )),
     $('.mainpage').on('click', event => (
       $('#mainpage').show(),
       $('#company').hide(),
       $('#post').hide(),
+      $('#update').hide(),
       event.target
     ))
   ))
