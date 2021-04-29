@@ -68,7 +68,6 @@ const onSignOutFailure = function () {
 const onIndexSuccess = function (response) {
   // extract the jobs from our response's data so they are easier to use
   const jobs = response.jobs
-  console.log(response)
   // this will be all of the html to show every job
   let jobHtml = ''
   // for each job in our response's data

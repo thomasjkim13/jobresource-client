@@ -51,7 +51,6 @@ const jobIndex = function () {
 }
 
 const create = function (data) {
-  console.log('data is ', data)
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/jobs',

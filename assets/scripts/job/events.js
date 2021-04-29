@@ -44,7 +44,6 @@ const onSignOut = function (event) {
   }
 
 const onIndexJob = function () {
-  console.log('in events.js the button was clicked')
   api.jobIndex()
     .then(ui.onIndexSuccess)
     .catch(ui.onError)
