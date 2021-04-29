@@ -14,8 +14,6 @@ $(() => {
   $('#post').hide()
   $('#job-destroy').hide()
   
-
-
   $('#sign-up').on('submit', jobEvents.onSignUp)
   $('#sign-in').on('submit', jobEvents.onSignIn)
   $('#change-pw').on('submit', jobEvents.onChangePw)
@@ -24,7 +22,6 @@ $(() => {
   $('#post').on('submit', jobEvents.onCreateJob)
   $('#job-destroy').on('submit', jobEvents.onDestroyJob)
   $('#update').on('submit', jobEvents.onUpdateJob)
-
 
   $('#homepage').on('click', event => (
     $('.container').hide(), 

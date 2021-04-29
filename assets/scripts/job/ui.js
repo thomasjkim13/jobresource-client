@@ -96,9 +96,7 @@ const onCreateSuccess = function () {
 
 const onDestroySuccess = function () {
   $('#message').text('Job successfully deleted! Click JOBS tab to refresh')
-  // adding a class of `success` to the element with the id `books-destroy-message`
   setTimeout(() => {
-    // Clear the destroy books message
     $('#message').text('')
   }, 1500)
   $('#job-display').trigger('reset')
@@ -112,7 +110,16 @@ const onUpdateSuccess = function () {
     $('#message').text('')
   }, 1500)
   $('#update').trigger('reset')
-  // reload($('update'))
+}
+
+const onError = function () {
+  $('#message').text('Something went wrong, please try again.')
+  $('#message').addClass('failure')
+  setTimeout(() => {
+    $('#message').text('')
+    $('#message').removeClass('failure')
+  }, 1500)
+  $('form').trigger('reset')
 }
 
 module.exports = {
@@ -127,5 +134,6 @@ module.exports = {
   onIndexSuccess,
   onCreateSuccess,
   onDestroySuccess,
-  onUpdateSuccess
+  onUpdateSuccess,
+  onError
 }
