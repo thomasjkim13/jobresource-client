@@ -4,13 +4,16 @@ const store = require('./../store')
 const onSignUpSuccess = function () {
   $('#message').text('Signed up successfully')
   setTimeout(() => {
-  $('#message').text('')
+    $('#message').text('')
   }, 1500)
   $('#sign-up').trigger('reset')
 }
-  
+
 const onSignUpFailure = function () {
   $('#message').text('Sign up failed')
+  setTimeout(() => {
+    $('#message').text('')
+  }, 1500)
 }
 
 const onSignInSuccess = function (response) {
@@ -24,13 +27,16 @@ const onSignInSuccess = function (response) {
   store.user = response.user
   $('#message').text('Signed In Successfully!')
   setTimeout(() => {
-  $('#message').text('')
+    $('#message').text('')
   }, 1500)
   $('#sign-in').trigger('reset')
 }
 
 const onSignInFailure = function () {
   $('#message').text('Invalid Username or Password')
+  setTimeout(() => {
+    $('#message').text('')
+  }, 1500)
 }
 
 const onChangePwSuccess = function () {
@@ -41,13 +47,16 @@ const onChangePwSuccess = function () {
   $('#message').text('Password Changed!')
   setTimeout(() => {
     $('#message').text('')
-    }, 1500)
+  }, 1500)
   $('#change-pw').trigger('reset')
 }
 
 const onChangePwFailure = function () {
-    $('#message').text('Password Not Match!')
-  }
+  $('#message').text('Password Not Match!')
+  setTimeout(() => {
+    $('#message').text('')
+  }, 1500)
+}
 
 const onSignOutSuccess = function () {
   $('.container').show()
@@ -55,7 +64,7 @@ const onSignOutSuccess = function () {
   $('#message').text('Logged Out Successfully!')
   setTimeout(() => {
     $('#message').text('')
-    }, 1500)
+  }, 1500)
 
   location.reload();
   store.user = null
@@ -63,6 +72,9 @@ const onSignOutSuccess = function () {
 
 const onSignOutFailure = function () {
   $('#message').text('Error')
+  setTimeout(() => {
+    $('#message').text('')
+  }, 1500)
 }
 
 const onIndexSuccess = function (response) {
@@ -89,7 +101,7 @@ const onCreateSuccess = function () {
   $('#message').text('Job successfully created!')
   setTimeout(() => {
     $('#message').text('')
-    }, 1500)
+  }, 1500)
   $('#post').trigger('reset')
 }
 
@@ -100,7 +112,6 @@ const onDestroySuccess = function () {
   }, 1500)
   $('#job-display').trigger('reset')
   $('#job-destroy').trigger('reset')
-
 }
 
 const onUpdateSuccess = function () {
@@ -121,6 +132,13 @@ const onError = function () {
   $('form').trigger('reset')
 }
 
+const onCreateCommentSuccess = function () {
+  $('#message').text('Comment successfully created!')
+  setTimeout(() => {
+    $('#message').text('')
+  }, 1500)
+}
+
 module.exports = {
   onSignInSuccess,
   onSignInFailure,
@@ -134,5 +152,6 @@ module.exports = {
   onCreateSuccess,
   onDestroySuccess,
   onUpdateSuccess,
-  onError
+  onError,
+  onCreateCommentSuccess
 }

@@ -13,7 +13,7 @@ $(() => {
   $('#update').hide()
   $('#post').hide()
   $('#job-destroy').hide()
-  
+
   $('#sign-up').on('submit', jobEvents.onSignUp)
   $('#sign-in').on('submit', jobEvents.onSignIn)
   $('#change-pw').on('submit', jobEvents.onChangePw)
@@ -22,9 +22,10 @@ $(() => {
   $('#post').on('submit', jobEvents.onCreateJob)
   $('#job-destroy').on('submit', jobEvents.onDestroyJob)
   $('#update').on('submit', jobEvents.onUpdateJob)
+  $('#createComment').on('click', jobEvents.onPostComment)
 
   $('#homepage').on('click', event => (
-    $('.container').hide(), 
+    $('.container').hide(),
     $('.signout').show(),
     event.target,
     $('.postjob').on('click', event => (
@@ -51,23 +52,22 @@ $(() => {
   ))
 })
 
+// $('.mainpage').on('click', event => (
+//   $('#mainpage').show(),
+//   $('#company').hide(),
+//   $('#post').hide(),
+//   event.target
+// ))
 
-  // $('.mainpage').on('click', event => (
-  //   $('#mainpage').show(),
-  //   $('#company').hide(),
-  //   $('#post').hide(),
-  //   event.target
-  // ))
-
-  // $('.companybtn').on('click', event => (
-  //   $('#company').show(),
-  //   $('#mainpage').hide(),
-  //   $('#post').hide(),
-  //   event.target
-  // ))
-  // $('.postjob').on('click', event => (
-  //   $('#company').hide(),
-  //   $('#mainpage').hide(),
-  //   $('#post').show(),
-  //   event.target
-  // ))
+// $('.companybtn').on('click', event => (
+//   $('#company').show(),
+//   $('#mainpage').hide(),
+//   $('#post').hide(),
+//   event.target
+// ))
+// $('.postjob').on('click', event => (
+//   $('#company').hide(),
+//   $('#mainpage').hide(),
+//   $('#post').show(),
+//   event.target
+// ))

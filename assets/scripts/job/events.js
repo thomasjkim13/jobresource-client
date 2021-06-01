@@ -9,7 +9,7 @@ const onSignUp = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
-  
+
   api.signUp(data)
     .then(ui.onSignUpSuccess)
     .catch(ui.onSignUpFailure)
@@ -29,7 +29,7 @@ const onChangePw = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
-  
+
   api.changePw(data)
     .then(ui.onChangePwSuccess)
     .catch(ui.onChangePwFailure)
@@ -37,11 +37,10 @@ const onChangePw = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  
   api.signOut()
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
-  }
+}
 
 const onIndexJob = function () {
   api.jobIndex()
@@ -49,9 +48,9 @@ const onIndexJob = function () {
     .catch(ui.onError)
 }
 
-const onCreateJob = function(event) {
+const onCreateJob = function (event) {
   event.preventDefault()
-  
+
   const form = event.target
   const data = getFormFields(form)
 
@@ -76,19 +75,30 @@ const onUpdateJob = function (event) {
   const data = getFormFields(form)
   // extracting the book id out of the formData
   const id = data.job.id
-  // update the book with `id`, using the data from our form
+
   api.update(id, data)
     .then(ui.onUpdateSuccess)
     .catch(ui.onError)
 }
 
+const onPostComment = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.createComment(data)
+    .then(ui.onCreateCommentSuccess)
+    .catch(ui.onError)
+}
+
 module.exports = {
-    onSignIn,
-    onSignUp,
-    onChangePw,
-    onSignOut,
-    onIndexJob,
-    onCreateJob,
-    onDestroyJob,
-    onUpdateJob
+  onSignIn,
+  onSignUp,
+  onChangePw,
+  onSignOut,
+  onIndexJob,
+  onCreateJob,
+  onDestroyJob,
+  onUpdateJob,
+  onPostComment
 }

@@ -82,13 +82,49 @@ const update = function (id, data) {
   })
 }
 
+const createComment = function (data) {
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/comments',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: data
+  })
+}
+
+const destroyComment = function (data, commentId) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/comments/' + commentId,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: data
+  })
+}
+
+const updateComment = function (commentId, data) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/comments/' + commentId,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: data
+  })
+}
+
 module.exports = {
-    signIn,
-    signUp,
-    changePw,
-    signOut,
-    jobIndex,
-    create,
-    destroy,
-    update
+  signIn,
+  signUp,
+  changePw,
+  signOut,
+  jobIndex,
+  create,
+  destroy,
+  update,
+  createComment,
+  destroyComment,
+  updateComment
 }
