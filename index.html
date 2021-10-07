@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Job Search</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+<!-------------------------------------Front page---------------------------------------->
+      <section id="banner">
+        <nav>
+          <h1 class="logo">WANNABE</h1>
+          <div class="nav-links">
+            <ul>
+              <li><button class="mainpage">JOBS</button></li>
+              <li><button class="postjob">POST</button></li>
+              <li><button class="updatebtn">UPDATE</button></li>
+            </ul>
+          </div>
+          <form id="sign-out">
+            <button type="reset" class="signout" value="Sign Out">LOGOUT</button>
+          </form>
+        </nav>
+        <p id="message"></p>
+        <div class="container">
+          <div class="card">
+            <div class="inner-box" id="card">
+              <div class="front">
+                <h2 id="login">LOGIN</h2>
+                <form id="sign-in">
+                  <input type="email" name="credentials[email]" class="input-box" placeholder="Email Address" required>
+                  <input type="password" name="credentials[password]" class="input-box" placeholder="Password" required>
+                  <button type="submit" class="submit-btn" id="signin">Sign In</button>
+                </form>
+                <button type="button" class="submit-btn" id="signup" onclick="openBack()">Sign Up</button>
+                <form id="change-pw">
+                  <input type="password" name="passwords[old]" class="input-box" placeholder="Current Password" required>
+                  <input type="password" name="passwords[new]" class="input-box" placeholder="New Password" required>
+                  <button type="submit" class="submit-btn">Save Change</button>
+                  <button type="button" id="homepage" class="submit-btn">Home Page</button>
+                </form>
+<!------------------------------------Back Page Sign Up-------------------------------->
+              </div>
+              <div class="back">
+                <h2>REGISTER</h2>
+                <form id="sign-up">
+                  <input type="email" name="credentials[email]" class="input-box" placeholder="Email Address" required>
+                  <input type="password" name="credentials[password]" class="input-box" placeholder="Password" required>
+                  <input type="password" name="credentials[password_confirmation]" class="input-box" placeholder="Confirm Password" required>
+                  <button type="submit" class="submit-btn" onclick="openFront()">Sign Up</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          let card = document.getElementById("card")
+          function openBack(){
+            card.style.transform = "rotateY(-180deg)"
+          }
+          function openFront(){
+            card.style.transform = "rotateY(0deg)"
+          }
+        </script>
+<!-------------------------------DELETE JOB------------------------------------->
+        <form id="job-destroy">
+          <input name="job[id]" type="text" class="destroyJob" placeholder="Enter id here" required>
+          <button class="destroybtn">DELETE</button>
+        </form>
+        </br>
+
+<!---------------------------------Main Page----------------------------------->
+        <form id="mainpage">
+          <div id="container">
+            <!-- <div class="search-bar">
+              <input type="text" class="searchtitle" placeholder="Job Title">
+              <input type="text" class="searchlevel" placeholder="Experience Level">
+              <button class="searchbtn">Search</button>
+            </div> -->
+            <div id="job-display"></div>
+          </div>
+        </form>  
+<!---------------------------------Update Page--------------------------------->
+        <form id="update">
+          <input name="job[id]" type="text" class="searchcompany" placeholder="Enter id here">
+          <input name="job[company]" type="text" class="searchcompany" placeholder="Enter company name">
+          <input name="job[title]" type="text" class="searchcompany" placeholder="Enter job title">
+          <input name="job[level]" type="text" class="searchcompany" placeholder="Enter experience level">
+          <button class="searchbtn">Update</button>
+        </form>
+<!-------------------------------POST JOB------------------------------->
+        <form id="post">
+          <input name="job[company]" type="text" class="postCompany" placeholder="Company Name">
+          <input name="job[title]" type="text" class="postTitle" placeholder="Job Title">
+          <input name="job[level]" type="text" class="postLevel" placeholder="Experience Level">
+          <button type="submit" id="createPost" class="searchbtn">POST</button>
+        </form>
+
+      </section>  
+
+      
+    </body>
+</html>
+
+
+
